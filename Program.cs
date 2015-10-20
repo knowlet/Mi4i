@@ -19,14 +19,13 @@ namespace Mi4i
             {
                 DateTime dt = Convert.ToDateTime(t);
                 TimeSpan ts = dt.Subtract(DateTime.Now);
-                Console.WriteLine(ts.TotalSeconds);
                 while (ts.TotalSeconds > 0)
                 {
                     Console.Write("\r");
                     Console.Write("倒數：" + ts.TotalSeconds + "\t");
                     ts = dt.Subtract(DateTime.Now);
                 }
-                Console.WriteLine("\r倒數完成\t\t");
+                Console.WriteLine("\r倒數完成\t\t\t");
             }
             Console.WriteLine("請選擇購買方式：\n\t[1] 買一隻\n\t[2] 一直買");
             int choose = 0;
