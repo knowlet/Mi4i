@@ -13,6 +13,9 @@ namespace Mi4i
             Bot bot = new Bot();
             bot.setUserData("f108854e@opayq.com", "xenl.48dfz");
             bot.login();
+            Console.WriteLine("請選擇購買方式：\n\t[1] 買一隻\n\t[2] 一直買");
+            int choose = 0;
+            Int32.TryParse(Console.ReadLine(), out choose);
             Console.WriteLine("使用倒數功能請輸入日期（如不需要請按Enter繼續）");
             string t = Console.ReadLine();
             if (!t.Equals(String.Empty))
@@ -27,9 +30,6 @@ namespace Mi4i
                 }
                 Console.WriteLine("\r倒數完成\t\t\t");
             }
-            Console.WriteLine("請選擇購買方式：\n\t[1] 買一隻\n\t[2] 一直買");
-            int choose = 0;
-            Int32.TryParse(Console.ReadLine(), out choose);
             switch (choose)
             {
                 case 1:
